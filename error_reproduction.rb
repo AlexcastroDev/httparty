@@ -20,7 +20,8 @@ class BugTest < Minitest::Test
     base_uri = 'https://api.bing.microsoft.com/v7.0/images/search'
     options = {
       query: { q: 'whatever' },
-      headers: { 'Ocp-Apim-Subscription-Key' => 'missing', 'Content-Type': 'application/json' }
+      headers: { 'Ocp-Apim-Subscription-Key' => 'missing', 'Content-Type': 'application/json' },
+      format: :json
     }
 
     response = HTTParty.get(base_uri, options)
