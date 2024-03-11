@@ -25,6 +25,6 @@ class BugTest < Minitest::Test
 
     response = HTTParty.get(base_uri, options)
 
-    assert_equal response.parsed_response.class, Hash
+    assert_equal response.parsed_response.class, Hash # false
   end
 end
